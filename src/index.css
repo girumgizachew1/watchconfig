@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.Source-Sans-Pro {
+  font-family: 'Source Sans Pro', sans-serif;
+}
