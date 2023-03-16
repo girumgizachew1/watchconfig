@@ -4,6 +4,8 @@ import reactLogo from './assets/react.svg'
 import Experience from './components/Experience'
 import Navbar from './components/navbar'
 import Config from './components/Config'
+import Configr from './components/Config2'
+
 import { CustomizationProvider } from './context/custumization' 
 function App() {
 
@@ -21,7 +23,7 @@ function App() {
                 <fog attach='fog' args={['#fff' ,10 ,20]}/>
                 <Experience/>
               </Canvas>
-              <Config/>
+              <Configr/>
             </div>
       </div>
       </CustomizationProvider>

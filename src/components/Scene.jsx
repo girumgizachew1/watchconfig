@@ -6,7 +6,7 @@ import { Color } from 'three'
 const Scene = (props) => {
 
 
-  const {material, bandcolor} = useCustomization()
+  const {material, bandcolor, roundcolor} = useCustomization()
   const { nodes, materials } = useGLTF('./applewatch/scene.gltf')
 
 
@@ -167,9 +167,17 @@ const Scene = (props) => {
           <mesh geometry={nodes.mcMtSAOyQxOEEfl.geometry} material={materials.sJrbBWzziZrNyXB} />
           <mesh geometry={nodes.qbgXzfcPGFYiUnN.geometry} material={materials.FBAtOQrXrgOoPNd} />
           <mesh geometry={nodes.dXSXlyOaLTQHAnn.geometry} material={materials.gMZhwegVXLXWOLd} />
-          <mesh geometry={nodes.QpBpNnkHikCzRXn.geometry} material={materials.JUrNntQLbxHnFtO} />
+
+          <mesh className='watchround' geometry={nodes.QpBpNnkHikCzRXn.geometry}>
+            <meshStandardMaterial {...(
+              material === 'metal'
+                            ? metalTextureprops
+                            : materials.JUrNntQLbxHnFtO)} color={roundcolor.color}/>
+            
+          </mesh>
+        
           <mesh geometry={nodes.JcqbcJEVwcScYbo.geometry} material={materials.JUrNntQLbxHnFtO} />
-        </group>
+          </group>
       </group>
     </group>
   )
