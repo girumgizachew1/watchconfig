@@ -2,24 +2,25 @@ import React, { useRef } from 'react'
 import { useGLTF, useTexture } from '@react-three/drei'
 import * as Three from 'three'
 import { useCustomization } from '../context/custumization'
+import { Color } from 'three'
 const Scene = (props) => {
 
 
-  const {material} = useCustomization()
+  const {material, bandcolor} = useCustomization()
   const { nodes, materials } = useGLTF('./applewatch/scene.gltf')
 //material={materials.KwQHVIjAaOBvYOl}
   const leatherTextureprops = useTexture({
-    map: './texture/HardLeather/Leather_011_basecolor.jpg',
+   // map: './texture/HardLeather/Leather_011_basecolor.jpg',
     normalMap: './texture/HardLeather/Leather_011_normal.jpg',
     roughnessMap: './texture/HardLeather/Leather_011_roughness.jpg',
     aoMap: './texture/HardLeather/Leather_011_ambientOcclusion.jpg',
   })
-    leatherTextureprops.map.repeat.set(6,6);
+   // leatherTextureprops.map.repeat.set(6,6);
     leatherTextureprops.normalMap.repeat.set(6,6);
     leatherTextureprops.roughnessMap.repeat.set(6,6);
     leatherTextureprops.aoMap.repeat.set(6,6);
    
-    leatherTextureprops.map.wrapS = leatherTextureprops.map.wrapT= Three.RepeatWrapping;
+  //  leatherTextureprops.map.wrapS = leatherTextureprops.map.wrapT= Three.RepeatWrapping;
     leatherTextureprops.normalMap.wrapS = leatherTextureprops.normalMap.wrapT= Three.RepeatWrapping;
        leatherTextureprops.roughnessMap.wrapS = leatherTextureprops.roughnessMap.wrapT= Three.RepeatWrapping;
        leatherTextureprops.aoMap.wrapS = leatherTextureprops.aoMap.wrapT= Three.RepeatWrapping;
@@ -40,11 +41,11 @@ const Scene = (props) => {
 
           <mesh geometry={nodes.NIYNwKgmPYCkzpx.geometry} material={materials.RfziScXwNjFOjTf} />         
           <mesh geometry={nodes.BrmhLaxyDmhbhXA.geometry} >
-          <meshStandardMaterial {...material === 'leather' ? leatherTextureprops : materials.KwQHVIjAaOBvYOl }/>
+          <meshStandardMaterial {...(material === 'leather' ? leatherTextureprops : materials.KwQHVIjAaOBvYOl)} color={bandcolor.color }/>
            </mesh>
           <mesh geometry={nodes.tqQTKXmBvXiXuUi.geometry} material={materials.iDKPrezlRKAMsXJ} />
           <mesh geometry={nodes.yTjoxDvwbAPZygY.geometry} >
-            <meshStandardMaterial {...material === 'leather' ? leatherTextureprops : materials.QGhrBgCXrJDNcrC}/>
+            <meshStandardMaterial {...(material === 'leather' ? leatherTextureprops : materials.QGhrBgCXrJDNcrC)} color={bandcolor.color } />
            </mesh>
          
          
