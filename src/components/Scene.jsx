@@ -152,8 +152,9 @@ const Scene = (props) => {
           <mesh geometry={nodes.KeqqEyvZchDDdlP.geometry} material={materials.AjFlTFrWzhywymA} />
           <mesh geometry={nodes.skbFGMQxPawHdOT.geometry} material={materials.xYqzIToOcTBbEzp} />
           <mesh geometry={nodes.ErOVeLWOcyHrdoT.geometry} material={materials.xYqzIToOcTBbEzp} />
+         
           <mesh geometry={nodes.ajDgJcjsZTQAtOL.geometry} material={materials.rcZoXGfqfnZjYLv} />
-          <mesh geometry={nodes.wflxnmxxYXvnLxp.geometry} material={materials.YRNmAgRITIuwDMU} />
+
           <mesh geometry={nodes.ePnvfhsUgYTHLdP.geometry} material={materials.iVwMRUBqdpoOFmg} />
           <mesh geometry={nodes.aynleugQGbyNYsa.geometry} material={materials.kFNgmsjtRAxVPtH} />
           <mesh geometry={nodes.HyRzdvVQMwELnwT.geometry} material={materials.upTfEpgNFxflqtf} />
@@ -172,7 +173,7 @@ const Scene = (props) => {
             <meshStandardMaterial {...(
               roundmaterial === 'weavemetal'? weavemetalTextureprops
               :roundmaterial === 'metal' ? metalTextureprops
-              : materials.JUrNntQLbxHnFtO)} color={roundcolor.color}/>
+                            : materials.JUrNntQLbxHnFtO)} color={roundcolor.color}/>
             
           </mesh>
         
