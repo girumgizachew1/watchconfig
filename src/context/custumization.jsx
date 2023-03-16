@@ -28,7 +28,7 @@ export const bandcolors = [
 
 
 export const CustomizationProvider = ( props ) => {
-    const [material , setMaterial] = useState("leather")
+    const [material , setMaterial] = useState("sololoop")
     const [bandcolor, setBandcolor] =useState(bandcolors[0])
     return(
         <CustomizationContext.Provider 

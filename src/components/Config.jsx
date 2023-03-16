@@ -8,9 +8,13 @@ function Config() {
     <div className=' w-full md:w-[85vh] h-[85vh] bg-gray-200 rounded-2xl shadow-zinc-200 '>
         <div className='p-4 space-y-2'>
             <h1>Band</h1>    
-            <div className='flex flex-row text-xs space-x-2' >
-                <button className='bg-gray-300 px-2 py-1 rounded-3xl text-white ' onClick={() => setMaterial('sololoop')} >Solo Loop</button>
-                <button className='bg-gray-300 px-2 py-1 rounded-3xl text-white ' onClick={() => setMaterial('leather')} >Leather</button>
+            <div className='grid grid-cols-3 gap-2 text-black text-xs'>
+                <button className='bg-gray-400 px-2 py-1 rounded-3xl text-white ' onClick={() => setMaterial('sololoop')} >Solo Loop</button>
+                <button className='bg-gray-400 px-2 py-1 rounded-3xl text-white ' onClick={() => setMaterial('stripeleather')} >Stripe Leather</button>
+                <button className='bg-gray-400 px-2 py-1 rounded-3xl text-white ' onClick={() => setMaterial('normalleather')} >Normal Leather</button>
+                <button className='bg-gray-400 px-2 py-1 rounded-3xl text-white ' onClick={() => setMaterial('weaveleather')} >Weave Leather</button>
+                <button className='bg-gray-400 px-2 py-1 rounded-3xl text-white ' onClick={() => setMaterial('weavemetal')} >Weave Metal</button>
+                <button className='bg-gray-400 px-2 py-1 rounded-3xl text-white ' onClick={() => setMaterial('metal')} >Metal</button>
             </div>
             <div className='flex flex-col' >
                 <h1 className='text-sm' >color</h1>
