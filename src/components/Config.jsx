@@ -8,7 +8,7 @@ function Config() {
     <div className=' w-full md:w-[85vh] h-[85vh] bg-gray-200 rounded-2xl shadow-zinc-200 '>
         <div className='p-4 space-y-2'>
             <h1>Band</h1>    
-            <div className='grid grid-cols-3 gap-2 text-black text-xs'>
+            <div className='grid grid-cols-3 gap-2 text-black text-xs mx-auto'>
                 <button className='bg-gray-400 px-2 py-1 rounded-3xl text-white ' onClick={() => setMaterial('sololoop')} >Solo Loop</button>
                 <button className='bg-gray-400 px-2 py-1 rounded-3xl text-white ' onClick={() => setMaterial('stripeleather')} >Stripe Leather</button>
                 <button className='bg-gray-400 px-2 py-1 rounded-3xl text-white ' onClick={() => setMaterial('normalleather')} >Normal Leather</button>
@@ -18,7 +18,7 @@ function Config() {
             </div>
             <div className='flex flex-col' >
                 <h1 className='text-sm' >color</h1>
-                <div className='grid grid-cols-5 gap-3 ' style={{ fontFamily: 'Source Sans Pro' }}>
+                <div className='grid grid-cols-5 gap-6 mx-auto ' style={{ fontFamily: 'Source Sans Pro' }}>
                     {bandcolors.map((item, index) => (
                         <div
                         key={index}
@@ -26,9 +26,7 @@ function Config() {
                         onClick={() => setBandcolor(item)}
                         >   
                         <div className='w-7 border-gray-300 shadow-lg border h-7 rounded-full' style={{ backgroundColor: item.color }} />
-                        <div className='text-gray-700 text-xs'>
-                            {item.name}
-                        </div>
+                        
                         </div>
                     ))}
                 </div>

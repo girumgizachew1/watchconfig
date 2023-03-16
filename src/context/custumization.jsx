@@ -87,11 +87,6 @@ export const roundcolors = [
        name: "FLAMINGO",
        color:  "#F1473A",
    },
-  
-   {
-       name: "RANGITOTO",
-       color:  "#313729",
-   },
    {
        name: "APRICOT",
        color:  "#EE8083",
@@ -99,28 +94,26 @@ export const roundcolors = [
    {
        name: "MARIGOLD YELLOWL",
        color:  "#F8E274",
-   },{
-       name: "COD GRAY",
-       color:  "#151515",
    },
-  
    {
        name: "BALI HAI",
        color:  "#92A4BA",
    },
    {
+       name: "SANDY BROWN",
+       color:  "#F28F56",
+   },
+   {
        name: "EDGEWATER",
        color:  "#C8E1D1",
    },
-   {
-       name: "SANDY BROWN",
-       color:  "#F28F56",
-   }
+   
 ]
 
 
 export const CustomizationProvider = ( props ) => {
     const [material , setMaterial] = useState("sololoop")
+    const [roundmaterial , setRoundmaterial] = useState("sololoop")
     const [bandcolor, setBandcolor] =useState(bandcolors[0])
     const [roundcolor, setRoundcolor] =useState(roundcolors[0])
     
@@ -129,6 +122,8 @@ export const CustomizationProvider = ( props ) => {
         value={{ 
             material, 
             setMaterial,
+            roundmaterial, 
+            setRoundmaterial,
             bandcolor,
             setBandcolor,
             roundcolor,
