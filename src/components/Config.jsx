@@ -5,7 +5,7 @@ function Config() {
     const { material, setMaterial, bandcolor , setBandcolor } = useCustomization();
     console.log(material);
   return (
-    <div className='w-[85vh] h-[85vh] bg-gray-200 rounded-2xl shadow-zinc-200 '>
+    <div className=' w-full md:w-[85vh] h-[85vh] bg-gray-200 rounded-2xl shadow-zinc-200 '>
         <div className='p-4 space-y-2'>
             <h1>Band</h1>    
             <div className='flex flex-row text-xs space-x-2' >

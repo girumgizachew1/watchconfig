@@ -14,7 +14,7 @@ function App() {
             <div className='h-20 w-full bg-white' >
               <Navbar/>
             </div>
-            <div className='flex flex-row w-full h-full px-10' >
+            <div className='flex flex-col md:flex-row w-full h-full px-10' >
             <Config/>
               <Canvas>
                 <color attach='background' args={['#fff']}/>
