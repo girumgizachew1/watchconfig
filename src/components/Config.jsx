@@ -12,9 +12,9 @@ function Config() {
                 <button className={`${material === 'sololoop' ? 'bg-cyan-600' : 'bg-zinc-600'} px-1 py-2 rounded-3xl text-white`} onClick={() => setMaterial('sololoop')} >Solo Loop</button>
                 <button className={`${material === 'stripeleather' ? 'bg-cyan-600' : 'bg-zinc-600'} px-1 py-2 rounded-3xl text-white`} onClick={() => setMaterial('stripeleather')} >Stripe Leather</button>
                 <button className={`${material === 'normalleather' ? 'bg-cyan-600' : 'bg-zinc-600'} px-1 py-2 rounded-3xl text-white`} onClick={() => setMaterial('normalleather')} >Normal Leather</button>
-                <button className={`${material === 'weaveleather' ? 'bg-cyan-600' : 'bg-zinc-600'} px-1 py-2 rounded-3xl text-white`} onClick={() => setMaterial('weaveleather')} >Weave Leather</button>
-                <button className={`${material === 'weavemetal' ? 'bg-cyan-600' : 'bg-zinc-600'} px-1 py-2 rounded-3xl text-white`} onClick={() => setMaterial('weavemetal')} >Weave Metal</button>
-                <button className={`${material === 'metal' ? 'bg-cyan-600' : 'bg-zinc-600'} px-1 py-2 rounded-3xl text-white`} onClick={() => setMaterial('metal')} >Metal</button>
+                <button className={`${material === 'weaveleather' ? 'bg-cyan-600' : 'bg-zinc-600'} px-1 mt-1 py-2 rounded-3xl text-white`} onClick={() => setMaterial('weaveleather')} >Weave Leather</button>
+                <button className={`${material === 'weavemetal' ? 'bg-cyan-600' : 'bg-zinc-600'} px-1 py-2 mt-1 rounded-3xl text-white`} onClick={() => setMaterial('weavemetal')} >Weave Metal</button>
+                <button className={`${material === 'metal' ? 'bg-cyan-600' : 'bg-zinc-600'} px-1 py-2 rounded-3xl mt-1 text-white`} onClick={() => setMaterial('metal')} >Metal</button>
             </div>
             <div className='flex flex-col' >
                 <h1 className='text-sm' >color</h1>
