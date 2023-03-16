@@ -25,45 +25,45 @@ export const bandcolors = [
         color:  "#1A1F19",
     },
     {
-        name: "WHITE",
-        color:  "#ffffff",
+        name: "DANUBE",
+        color:  "#61A5D2",
     },
     {
-        name: "VANILLA",
-        color:  "#CCB7A5",
+        name: "FLAMINGO",
+        color:  "#F1473A",
     },
    
     {
-        name: "CONIFER",
-        color:  "#C7DF57",
+        name: "RANGITOTO",
+        color:  "#313729",
     },
     {
-        name: "FLAME PEA",
-        color:  "#E2573D",
+        name: "APRICOT",
+        color:  "#EE8083",
     },
     {
-        name: "HEAVY METAL",
-        color:  "#1A1F19",
+        name: "MARIGOLD YELLOWL",
+        color:  "#F8E274",
     },{
-        name: "WHITE",
-        color:  "#ffffff",
+        name: "COD GRAY",
+        color:  "#151515",
     },
     {
-        name: "VANILLA",
-        color:  "#CCB7A5",
+        name: "CARARRA",
+        color:  "#E8E6E2",
     },
    
     {
-        name: "CONIFER",
-        color:  "#C7DF57",
+        name: "BALI HAI",
+        color:  "#92A4BA",
     },
     {
-        name: "FLAME PEA",
-        color:  "#E2573D",
+        name: "EDGEWATER",
+        color:  "#C8E1D1",
     },
     {
-        name: "HEAVY METAL",
-        color:  "#1A1F19",
+        name: "SANDY BROWN",
+        color:  "#F28F56",
     }
 ]
 
