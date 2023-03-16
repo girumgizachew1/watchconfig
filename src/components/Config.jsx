@@ -18,7 +18,7 @@ function Config() {
             </div>
             <div className='flex flex-col' >
                 <h1 className='text-sm' >color</h1>
-                <div className='flex flex-row space-x-4 '>
+                <div className='grid grid-cols-5 gap-3 '>
                     {bandcolors.map((item, index) => (
                         <div
                         key={index}

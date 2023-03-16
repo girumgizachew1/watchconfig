@@ -4,25 +4,66 @@ const CustomizationContext = createContext({});
 
 export const bandcolors = [
      {
-        name: "white",
+        name: "WHITE",
         color:  "#ffffff",
     },
     {
-        name: "black",
-        color:  "#000000",
+        name: "VANILLA",
+        color:  "#CCB7A5",
     },
    
     {
-        name: "Lime",
-        color:  "#00ff00",
+        name: "CONIFER",
+        color:  "#C7DF57",
     },
     {
-        name: "yellow",
-        color:  "#ffff00",
+        name: "FLAME PEA",
+        color:  "#E2573D",
     },
     {
-        name: "cyan",
-        color:  "#00ffff",
+        name: "HEAVY METAL",
+        color:  "#1A1F19",
+    },
+    {
+        name: "WHITE",
+        color:  "#ffffff",
+    },
+    {
+        name: "VANILLA",
+        color:  "#CCB7A5",
+    },
+   
+    {
+        name: "CONIFER",
+        color:  "#C7DF57",
+    },
+    {
+        name: "FLAME PEA",
+        color:  "#E2573D",
+    },
+    {
+        name: "HEAVY METAL",
+        color:  "#1A1F19",
+    },{
+        name: "WHITE",
+        color:  "#ffffff",
+    },
+    {
+        name: "VANILLA",
+        color:  "#CCB7A5",
+    },
+   
+    {
+        name: "CONIFER",
+        color:  "#C7DF57",
+    },
+    {
+        name: "FLAME PEA",
+        color:  "#E2573D",
+    },
+    {
+        name: "HEAVY METAL",
+        color:  "#1A1F19",
     }
 ]
 
