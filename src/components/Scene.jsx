@@ -81,6 +81,25 @@ const Scene = (props) => {
    weavemetalTextureprops.aoMap.wrapS = weavemetalTextureprops.aoMap.wrapT= Three.RepeatWrapping;
 
 
+
+
+   const metalTextureprops = useTexture({
+    // map: './texture/weavemetal/Metal_Weave_010_basecolor.jpg',
+     normalMap: './texture/metal/Sci-fi_Wall_008_normal.jpg',
+     roughnessMap: './texture/metal/Sci-fi_Wall_008_roughness.jpg',
+     aoMap: './texture/metal/Sci-fi_Wall_008_ambientOcclusion.jpg',
+   })
+    //metalTextureprops.map.repeat.set(6,6);
+  metalTextureprops.normalMap.repeat.set(6,6);
+  metalTextureprops.roughnessMap.repeat.set(6,6);
+  metalTextureprops.aoMap.repeat.set(6,6);
+    
+   //  metalTextureprops.map.wrapS = metalTextureprops.map.wrapT= Three.RepeatWrapping;
+  metalTextureprops.normalMap.wrapS = metalTextureprops.normalMap.wrapT= Three.RepeatWrapping;
+  metalTextureprops.roughnessMap.wrapS = metalTextureprops.roughnessMap.wrapT= Three.RepeatWrapping;
+  metalTextureprops.aoMap.wrapS = metalTextureprops.aoMap.wrapT= Three.RepeatWrapping;
+
+
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.7}>
@@ -96,11 +115,11 @@ const Scene = (props) => {
 
           <mesh geometry={nodes.NIYNwKgmPYCkzpx.geometry} material={materials.RfziScXwNjFOjTf} />         
           <mesh geometry={nodes.BrmhLaxyDmhbhXA.geometry} >
-          <meshStandardMaterial {...(material === 'leather' ? normalleatherTextureprops : materials.KwQHVIjAaOBvYOl)} color={bandcolor.color }/>
+          <meshStandardMaterial {...(material === 'leather' ? metalTextureprops : materials.KwQHVIjAaOBvYOl)} color={bandcolor.color }/>
            </mesh>
           <mesh geometry={nodes.tqQTKXmBvXiXuUi.geometry} material={materials.iDKPrezlRKAMsXJ} />
           <mesh geometry={nodes.yTjoxDvwbAPZygY.geometry} >
-            <meshStandardMaterial {...(material === 'leather' ? normalleatherTextureprops : materials.QGhrBgCXrJDNcrC)} color={bandcolor.color } />
+            <meshStandardMaterial {...(material === 'leather' ? metalTextureprops : materials.QGhrBgCXrJDNcrC)} color={bandcolor.color } />
            </mesh>
          
          
