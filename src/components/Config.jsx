@@ -17,7 +17,7 @@ function Config() {
                 <button className={`${material === 'metal' ? 'bg-cyan-600' : 'bg-zinc-600'} px-1 py-2 rounded-3xl mt-1 text-white`} onClick={() => setMaterial('metal')} >Metal</button>
             </div>
             <div className='flex flex-col' >
-                <h1 className='text-sm' >color</h1>
+                <h1 className='text-sm' >Color</h1>
                 <div className='grid grid-cols-5 gap-6 mx-auto ' style={{ fontFamily: 'Source Sans Pro' }}>
                     {bandcolors.map((item, index) => (
                         <div
