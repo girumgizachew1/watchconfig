@@ -8,7 +8,9 @@ const Scene = (props) => {
 
   const {material, bandcolor} = useCustomization()
   const { nodes, materials } = useGLTF('./applewatch/scene.gltf')
-//material={materials.KwQHVIjAaOBvYOl}
+
+
+//texture 1 corcodile leather
   const leatherTextureprops = useTexture({
    // map: './texture/HardLeather/Leather_011_basecolor.jpg',
     normalMap: './texture/HardLeather/Leather_011_normal.jpg',
@@ -26,6 +28,59 @@ const Scene = (props) => {
        leatherTextureprops.aoMap.wrapS = leatherTextureprops.aoMap.wrapT= Three.RepeatWrapping;
     
 
+  //texture 2 normal leather
+  const normalleatherTextureprops = useTexture({
+    // map: './texture/leather2/Leather_08_basecolor.jpg',
+     normalMap: './texture/leather2/Leather_008_Normal.jpg',
+     roughnessMap: './texture/leather2/Leather_008_Roughness.jpg',
+     aoMap: './texture/leather2/Leather_008_Ao.jpg',
+   })
+    // normalleatherTextureprops.map.repeat.set(6,6);
+     normalleatherTextureprops.normalMap.repeat.set(2,4);
+     normalleatherTextureprops.roughnessMap.repeat.set(1,2);
+     normalleatherTextureprops.aoMap.repeat.set(1,2);
+    
+   //  normalleatherTextureprops.map.wrapS = leatherTextureprops.map.wrapT= Three.RepeatWrapping;
+   normalleatherTextureprops.normalMap.wrapS = normalleatherTextureprops.normalMap.wrapT= Three.RepeatWrapping;
+   normalleatherTextureprops.roughnessMap.wrapS = normalleatherTextureprops.roughnessMap.wrapT= Three.RepeatWrapping;
+   normalleatherTextureprops.aoMap.wrapS = normalleatherTextureprops.aoMap.wrapT= Three.RepeatWrapping;
+     
+
+     //texture 2 normal leather
+  const wiredleatherTextureprops = useTexture({
+    // map: './texture/leather2/Leather_Weave_005_basecolor.jpg',
+     normalMap: './texture/leather3/Leather_Weave_005_normal.jpg',
+     roughnessMap: './texture/leather3/Leather_Weave_005_roughness.jpg',
+     aoMap: './texture/leather3/Leather_Weave_005_ambientOcclusion.jpg',
+   })
+    // wiredleatherTextureprops.map.repeat.set(6,6);
+    wiredleatherTextureprops.normalMap.repeat.set(1,3);
+    wiredleatherTextureprops.roughnessMap.repeat.set(1,3);
+    wiredleatherTextureprops.aoMap.repeat.set(1,3);
+    
+   //  wiredleatherTextureprops.map.wrapS = wiredleatherTextureprops.map.wrapT= Three.RepeatWrapping;
+   wiredleatherTextureprops.normalMap.wrapS = wiredleatherTextureprops.normalMap.wrapT= Three.RepeatWrapping;
+   wiredleatherTextureprops.roughnessMap.wrapS = wiredleatherTextureprops.roughnessMap.wrapT= Three.RepeatWrapping;
+   wiredleatherTextureprops.aoMap.wrapS = wiredleatherTextureprops.aoMap.wrapT= Three.RepeatWrapping;
+
+
+   const weavemetalTextureprops = useTexture({
+    // map: './texture/weavemetal/Metal_Weave_010_basecolor.jpg',
+     normalMap: './texture/weavemetal/Metal_Weave_010_normal.jpg',
+     roughnessMap: './texture/weavemetal/Metal_Weave_010_roughness.jpg',
+     aoMap: './texture/weavemetal/Metal_Weave_010_ambientOcclusion.jpg',
+   })
+    // weavemetalTextureprops.map.repeat.set(6,6);
+    weavemetalTextureprops.normalMap.repeat.set(1,6);
+    weavemetalTextureprops.roughnessMap.repeat.set(1,6);
+    weavemetalTextureprops.aoMap.repeat.set(1,3);
+    
+   //  weavemetalTextureprops.map.wrapS = weavemetalTextureprops.map.wrapT= Three.RepeatWrapping;
+   weavemetalTextureprops.normalMap.wrapS = weavemetalTextureprops.normalMap.wrapT= Three.RepeatWrapping;
+   weavemetalTextureprops.roughnessMap.wrapS = weavemetalTextureprops.roughnessMap.wrapT= Three.RepeatWrapping;
+   weavemetalTextureprops.aoMap.wrapS = weavemetalTextureprops.aoMap.wrapT= Three.RepeatWrapping;
+
+
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.7}>
@@ -41,11 +96,11 @@ const Scene = (props) => {
 
           <mesh geometry={nodes.NIYNwKgmPYCkzpx.geometry} material={materials.RfziScXwNjFOjTf} />         
           <mesh geometry={nodes.BrmhLaxyDmhbhXA.geometry} >
-          <meshStandardMaterial {...(material === 'leather' ? leatherTextureprops : materials.KwQHVIjAaOBvYOl)} color={bandcolor.color }/>
+          <meshStandardMaterial {...(material === 'leather' ? normalleatherTextureprops : materials.KwQHVIjAaOBvYOl)} color={bandcolor.color }/>
            </mesh>
           <mesh geometry={nodes.tqQTKXmBvXiXuUi.geometry} material={materials.iDKPrezlRKAMsXJ} />
           <mesh geometry={nodes.yTjoxDvwbAPZygY.geometry} >
-            <meshStandardMaterial {...(material === 'leather' ? leatherTextureprops : materials.QGhrBgCXrJDNcrC)} color={bandcolor.color } />
+            <meshStandardMaterial {...(material === 'leather' ? normalleatherTextureprops : materials.QGhrBgCXrJDNcrC)} color={bandcolor.color } />
            </mesh>
          
          
