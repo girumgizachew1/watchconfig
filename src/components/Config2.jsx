@@ -7,7 +7,7 @@ function Configr() {
   return (
     <div className=' w-full md:w-[85vh] h-[85vh] bg-gray-200 rounded-2xl shadow-zinc-200 '>
         <div className='p-4 space-y-2'>
-            <h1>Round</h1>    
+            <h1 className='text-sm' style={{ fontFamily: 'Source Sans Pro' }} >Round</h1>    
             <div className='grid grid-cols-3 gap-2 text-black text-xs'>
                 <button className='bg-gray-400 px-2 py-1 rounded-3xl text-white ' onClick={() => setMaterial('sololoop')} >Solo Loop</button>
                 <button className='bg-gray-400 px-2 py-1 rounded-3xl text-white ' onClick={() => setMaterial('weavemetal')} >Weave Metal</button>
