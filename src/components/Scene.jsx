@@ -6,7 +6,7 @@ import { Color } from 'three'
 const Scene = (props) => {
 
 
-  const {material, bandcolor, roundcolor, roundmaterial} = useCustomization()
+  const {material, bandcolor, roundcolor, roundmaterial ,drillcolor } = useCustomization()
   const { nodes, materials } = useGLTF('./applewatch/scene.gltf')
 
 
@@ -18,9 +18,9 @@ const Scene = (props) => {
     aoMap: './texture/HardLeather/Leather_011_ambientOcclusion.jpg',
   })
    // leatherTextureprops.map.repeat.set(6,6);
-    leatherTextureprops.normalMap.repeat.set(5,5);
-    leatherTextureprops.roughnessMap.repeat.set(5,5);
-    leatherTextureprops.aoMap.repeat.set(5,5);
+    leatherTextureprops.normalMap.repeat.set(6,6);
+    leatherTextureprops.roughnessMap.repeat.set(6,6);
+    leatherTextureprops.aoMap.repeat.set(6,6);
    
   //  leatherTextureprops.map.wrapS = leatherTextureprops.map.wrapT= Three.RepeatWrapping;
     leatherTextureprops.normalMap.wrapS = leatherTextureprops.normalMap.wrapT= Three.RepeatWrapping;
@@ -152,15 +152,21 @@ const Scene = (props) => {
           <mesh geometry={nodes.KeqqEyvZchDDdlP.geometry} material={materials.AjFlTFrWzhywymA} />
           <mesh geometry={nodes.skbFGMQxPawHdOT.geometry} material={materials.xYqzIToOcTBbEzp} />
           <mesh geometry={nodes.ErOVeLWOcyHrdoT.geometry} material={materials.xYqzIToOcTBbEzp} />
-         
           <mesh geometry={nodes.ajDgJcjsZTQAtOL.geometry} material={materials.rcZoXGfqfnZjYLv} />
+
 
           <mesh geometry={nodes.ePnvfhsUgYTHLdP.geometry} material={materials.iVwMRUBqdpoOFmg} />
           <mesh geometry={nodes.aynleugQGbyNYsa.geometry} material={materials.kFNgmsjtRAxVPtH} />
           <mesh geometry={nodes.HyRzdvVQMwELnwT.geometry} material={materials.upTfEpgNFxflqtf} />
-          <mesh geometry={nodes.bvsBShDTmaTjbXM.geometry} material={materials.YpOtGMmrQbktABJ} />
+
+          
+          <mesh geometry={nodes.bvsBShDTmaTjbXM.geometry} >
+          <meshStandardMaterial {...(materials.YpOtGMmrQbktABJ)} color={drillcolor.color}/>
+          </mesh>
+
           <mesh geometry={nodes.lnDzpNAJfMDjFms.geometry} material={materials.qxhxiJVpuwSrYLW} />
           <mesh geometry={nodes.lrTNGAQkeHccJph.geometry} material={materials.ycVxkCIsnetKUsw} />
+         
           <mesh geometry={nodes.jChLaKiiqDISJhc.geometry} material={materials.sSZvqgMuWCuMkAr} />
           <mesh geometry={nodes.DzgfJtxUfpgExsF.geometry} material={materials.mUXcyUQCxEEJdiO} />
           <mesh geometry={nodes.MBrZKZXWsvHIcZQ.geometry} material={materials.JBuGosClPcYrSry} />

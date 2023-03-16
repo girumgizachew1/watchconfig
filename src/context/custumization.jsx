@@ -110,12 +110,57 @@ export const roundcolors = [
    
 ]
 
+export const drillcolors = [
+    {
+       name: "WHITE",
+       color:  "#ffffff",
+   },
+   {
+       name: "VANILLA",
+       color:  "#CCB7A5",
+   },
+     {
+       name: "HEAVY METAL",
+       color:  "#1A1F19",
+   },
+   {
+       name: "DANUBE",
+       color:  "#61A5D2",
+   },
+   {
+       name: "FLAMINGO",
+       color:  "#F1473A",
+   },
+   {
+       name: "APRICOT",
+       color:  "#EE8083",
+   },
+   {
+       name: "MARIGOLD YELLOWL",
+       color:  "#F8E274",
+   },
+   {
+       name: "BALI HAI",
+       color:  "#92A4BA",
+   },
+   {
+       name: "SANDY BROWN",
+       color:  "#F28F56",
+   },
+   {
+       name: "EDGEWATER",
+       color:  "#C8E1D1",
+   },
+   
+]
+
 
 export const CustomizationProvider = ( props ) => {
     const [material , setMaterial] = useState("sololoop")
     const [roundmaterial , setRoundmaterial] = useState("sololoop")
     const [bandcolor, setBandcolor] =useState(bandcolors[0])
     const [roundcolor, setRoundcolor] =useState(roundcolors[0])
+    const [drillcolor, setdrillcolor] =useState(drillcolors[0])
     
     return(
         <CustomizationContext.Provider 
@@ -127,7 +172,9 @@ export const CustomizationProvider = ( props ) => {
             bandcolor,
             setBandcolor,
             roundcolor,
-            setRoundcolor
+            setRoundcolor,
+            drillcolor,
+            setdrillcolor
             }}
         >
             { props.children }
